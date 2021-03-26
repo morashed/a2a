@@ -17,6 +17,10 @@
      }
 */
 	
+	}
+
+	@keyframes repaint {from { zoom: 99.99999%; } to { zoom: 99.99998%; }}
+	
 	html,
 	html > body {
 		border: 0 !important;
@@ -29,6 +33,7 @@
 		    padding: 0 !important;
 		    position: static !important;
 		    width: auto !important;
+			background: yellow;
 	}
      html > body > .iframeClassName {
 		 border: 0 !important;
@@ -36,6 +41,15 @@
 		     min-height: 100% !important;
 		     width: 100% !important;
      }
+	 
+	 body {
+   	  transform: translateZ(0);
+   	  animation-name: 'repaint';
+   	  animation-duration: 3s;
+   	  animation-iteration-count: infinite;
+   	  animation-play-state: running;
+   	  animation-timing-function: linear;
+	 }
 	
 	
 </style>
